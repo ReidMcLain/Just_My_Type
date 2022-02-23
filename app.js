@@ -63,7 +63,7 @@ $(document).ready(function () {
               let minutes = (endTime - startTime) / 60000;
               wpm = Math.round(numberOfWords / minutes - 2 * numberoOfMistakes);
               const confirmBox = confirm(
-                `You typed ${wpm} words per minute! Would you like to try again?`
+                `Congratulations! You typed ${wpm} words per minute! Would you like to play again?`
               );
               if (confirmBox == true) {
                 location.reload();
@@ -79,9 +79,8 @@ $(document).ready(function () {
             }
           }
         } else {
-          let wrong = $('<span class="glyphicon glyphicon-remove"></span>');
-          $(wrong).appendTo("#feedback");
-          errors++;
+          let incorrect = $('<span class="glyphicon glyphicon-remove"></span>');
+          $(incorrect).appendTo("#feedback");
         }
       });
 });
