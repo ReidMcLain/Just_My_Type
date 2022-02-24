@@ -11,7 +11,7 @@ $(document).ready(function () {
     let startTime;
     
     let numberoOfMistakes = 0;
-    let numberOfWords = 54;
+    let numberOfWords = sentences.join(" ").split(" ").length;
 
 
     $("#keyboard-upper-container").hide();
